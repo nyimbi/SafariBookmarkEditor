@@ -36,8 +36,8 @@ class SafariBookmarks(object):
 		"""
 		plist_path = os.path.expanduser('~/Library/Safari/Bookmarks.plist')
 		if not os.path.isfile(plist_path):
-			print "Bookmarks.plist doesn't appear to exist."
-			print "Generating new Bookmarks.plist."
+			print( "Bookmarks.plist doesn't appear to exist.")
+			print ("Generating new Bookmarks.plist.")
 			self.generate(plist_path)
 		return plist_path
 
@@ -107,7 +107,7 @@ class SafariBookmarks(object):
 
 		"""
 		if title in self.titles:
-			print "Warning: Found preexisting bookmark with title %s, skipping." % (title)
+			print ("Warning: Found preexisting bookmark with title %s, skipping." % (title))
 			return
 		if title in self.titles:
 			return
